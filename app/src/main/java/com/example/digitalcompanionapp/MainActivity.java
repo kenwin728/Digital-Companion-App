@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void build(View v){
         //ill make the 4 buttons first
+        }
     }
     public void sabotage(View v){
-        View goldView, woodView, stoneView;
         int gold, wood, stone;
 
         goldView = findViewById(R.id.goldAmountText);
@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         wood = Integer.parseInt(((TextView) woodView).getText().toString());
         stoneView = findViewById(R.id.stoneAmountText);
         stone = Integer.parseInt(((TextView) stoneView).getText().toString());
+        stone = Integer.parseInt(((TextView) stoneAmountText).getText().toString());
 
         if (gold < 150 || wood < 150 || stone < 150){
             //a popup saying sabotage cant happen pops up
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
             ((TextView) goldView).setText(String.valueOf(gold));
             ((TextView) woodView).setText(String.valueOf(wood));
             ((TextView) stoneView).setText(String.valueOf(stone));
+            ((TextView) stoneAmountText).setText(String.valueOf(stone));
         }
     }
 }
