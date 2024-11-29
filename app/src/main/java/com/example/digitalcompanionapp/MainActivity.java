@@ -63,12 +63,52 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void collect(View v){
+        View view;
+        int building, resource;
+        // Gold Collection
+        view = findViewById(R.id.goldMineAmountText);
+        building = 30 * Integer.parseInt(((TextView) view).getText().toString());
+        view = findViewById(R.id.goldAmountText);
+        resource = building + Integer.parseInt(((TextView) view).getText().toString());
+        ((TextView) view).setText(String.valueOf(resource));
 
+        // Wood Collection
+        view = findViewById(R.id.treeReserveAmountText);
+        building = 25 * Integer.parseInt(((TextView) view).getText().toString());
+        view = findViewById(R.id.woodAmountText);
+        resource = building + Integer.parseInt(((TextView) view).getText().toString());
+        ((TextView) view).setText(String.valueOf(resource));
+
+        // Wood Collection
+        view = findViewById(R.id.quarryAmountText);
+        building = 20 * Integer.parseInt(((TextView) view).getText().toString());
+        view = findViewById(R.id.stoneAmountText);
+        resource = building + Integer.parseInt(((TextView) view).getText().toString());
+        ((TextView) view).setText(String.valueOf(resource));
     }
     public void build(View v){
-
+        //ill make the 4 buttons first
     }
     public void sabotage(View v){
+        View goldView, woodView, stoneView;
+        int gold, wood, stone;
 
+        goldView = findViewById(R.id.goldAmountText);
+        gold = Integer.parseInt(((TextView) goldView).getText().toString());
+        woodView = findViewById(R.id.woodAmountText);
+        wood = Integer.parseInt(((TextView) woodView).getText().toString());
+        stoneView = findViewById(R.id.stoneAmountText);
+        stone = Integer.parseInt(((TextView) stoneView).getText().toString());
+
+        if (gold < 150 || wood < 150 || stone < 150){
+            //a popup saying sabotage cant happen pops up
+        } else {
+            gold -= 150;
+            wood -= 150;
+            stone -= 150;
+            ((TextView) goldView).setText(String.valueOf(gold));
+            ((TextView) woodView).setText(String.valueOf(wood));
+            ((TextView) stoneView).setText(String.valueOf(stone));
+        }
     }
 }
