@@ -1,5 +1,6 @@
 package com.example.digitalcompanionapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -60,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
         listOfResourcesLL.setBackground(borderDrawable);
     }
     public void enemyGrids(View v){
-
+        Intent intent = new Intent(MainActivity.this, EnemyGridActivity.class);
+        startActivity(intent);
     }
     public void collect(View v){
         View view;
