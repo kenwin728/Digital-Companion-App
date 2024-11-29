@@ -62,10 +62,12 @@
             android:textSize="30sp" />
 
         <LinearLayout
+            android:id="@+id/ll_listOfResources"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="30dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"

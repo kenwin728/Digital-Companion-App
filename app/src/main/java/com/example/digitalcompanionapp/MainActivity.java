@@ -1,8 +1,11 @@
 package com.example.digitalcompanionapp;
 
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -16,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
     Button collectBtn;
     Button buildBtn;
     Button sabotageBtn;
+    TextView gameNameText;
     TextView goldAmountText;
     TextView woodAmountText;
     TextView stoneAmountText;
     TextView goldMineAmountText;
     TextView treeReserveAmountText;
     TextView quarryAmountText;
+    LinearLayout listOfResourcesLL;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +41,23 @@ public class MainActivity extends AppCompatActivity {
         collectBtn = findViewById(R.id.btn_collect);
         buildBtn = findViewById(R.id.btn_build);
         sabotageBtn = findViewById(R.id.btn_sabotage);
+        gameNameText = findViewById(R.id.gameName);
         goldAmountText = findViewById(R.id.goldAmountText);
         woodAmountText = findViewById(R.id.woodAmountText);
         stoneAmountText = findViewById(R.id.stoneAmountText);
         goldMineAmountText = findViewById(R.id.goldMineAmountText);
         treeReserveAmountText = findViewById(R.id.treeReserveAmountText);
         quarryAmountText = findViewById(R.id.quarryAmountText);
+        listOfResourcesLL = findViewById(R.id.ll_listOfResources);
+
+        // Create a GradientDrawable for the border
+        GradientDrawable borderDrawable = new GradientDrawable();
+        borderDrawable.setColor(Color.TRANSPARENT); // Background color inside the border
+        borderDrawable.setStroke(10, Color.BLACK); // Border width (in pixels) and color
+
+        // Set the drawable as the background of the TextView
+        gameNameText.setBackground(borderDrawable);
+        listOfResourcesLL.setBackground(borderDrawable);
     }
     public void enemyGrids(View v){
 
