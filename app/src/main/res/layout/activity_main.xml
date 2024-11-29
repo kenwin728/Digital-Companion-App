@@ -12,8 +12,6 @@
         android:layout_height="match_parent"
         android:background="#DCB370"
         android:orientation="vertical">
-
-        <TextView
             android:id="@+id/gameName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,137 +70,267 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:text="Castles &amp; Catapults"
+                android:textAlignment="center"
+                android:textSize="34sp" />
 
-                <TextView
                     android:id="@+id/goldText"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Gold: "
-                    android:textSize="30sp" />
+            <Button
+                android:id="@+id/btn_enemyGrids"
+                android:layout_width="match_parent"
+                android:backgroundTint="#633418"
+                android:onClick="enemyGrids"
+                android:text="Enemy Grids"
+                android:textSize="30sp" />
 
-                <TextView
-                    android:id="@+id/goldAmountText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="0"
-                    android:textSize="30sp" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/btn_collect"
+                android:layout_width="match_parent"
+                android:backgroundTint="#633418"
+                android:onClick="collect"
+                android:text="Collect"
+                android:textSize="30sp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="-30dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="Build:"
+                android:textAlignment="center"
+                android:id="@+id/ll_listOfBuildingOptions"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
 
                 <TextView
                     android:id="@+id/woodText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:id="@+id/btn_build_catapult"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
                     android:layout_weight="1"
                     android:text="Wood: "
-                    android:textSize="30sp" />
+                    android:backgroundTint="#633418"
+                    android:onClick="build_catapult"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/uwah"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/woodAmountText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:id="@+id/btn_build_goldMine"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textSize="30sp" />
-            </LinearLayout>
+                    android:backgroundTint="#633418"
+                    android:onClick="build_goldMine"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/uwah"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/stoneText"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/btn_build_treeReserve"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
                     android:layout_weight="1"
-                    android:text="Stone: "
-                    android:textSize="30sp" />
+                    android:backgroundTint="#633418"
+                    android:onClick="build_treeReserve"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/uwah"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
-                <TextView
-                    android:id="@+id/stoneAmountText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:id="@+id/btn_build_quarry"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
                     android:layout_weight="1"
-                    android:text="0"
-                    android:textSize="30sp" />
+                    android:backgroundTint="#633418"
+                    android:onClick="build_quarry"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/uwah"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_sabotage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#633418"
+                android:onClick="sabotage"
+                android:text="Sabotage"
+                android:textSize="30sp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:id="@+id/ll_listOfResources"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
 
-                <TextView
-                    android:id="@+id/goldMineText"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Gold Mine: "
-                    android:textSize="30sp" />
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/goldMineAmountText"
+                    <TextView
+                        android:id="@+id/goldText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Gold: "
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/goldAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="1"
-                    android:textSize="30sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/woodText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Wood: "
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/woodAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stoneText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Stone: "
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/stoneAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/goldMineText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Gold Mine: "
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/goldMineAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/treeReserveText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tree Reserve: "
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/treeReserveAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/quarryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Quarry: "
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/quarryAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:textSize="28sp" />
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/treeReserveText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tree Reserve: "
-                    android:textSize="30sp" />
-
-                <TextView
-                    android:id="@+id/treeReserveAmountText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="2"
-                    android:textSize="30sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/quarryText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Quarry: "
-                    android:textSize="30sp" />
-
-                <TextView
-                    android:id="@+id/quarryAmountText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="1"
-                    android:textSize="30sp" />
-            </LinearLayout>
         </LinearLayout>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/errorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Illegal Action!"
+            android:textAlignment="center"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#AA000000"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:padding="16dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"/>
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
