@@ -98,7 +98,8 @@
                 android:backgroundTint="#633418"
                 android:onClick="collect"
                 android:text="Collect"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:paddingHorizontal="5dp"/>
 
             <TextView
                 android:id="@+id/build_text"
@@ -174,7 +175,8 @@
                 android:backgroundTint="#633418"
                 android:onClick="sabotage"
                 android:text="Sabotage"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:paddingHorizontal="5dp"/>
 
             <LinearLayout
                 android:id="@+id/ll_listOfResources"
@@ -185,10 +187,11 @@
                 android:paddingLeft="10dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
 
                     <TextView
                         android:id="@+id/goldText"
@@ -227,9 +230,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
 
                     <TextView
                         android:id="@+id/woodText"
@@ -268,9 +272,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
 
                     <TextView
                         android:id="@+id/stoneText"
@@ -309,10 +314,11 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
 
                     <TextView
                         android:id="@+id/goldMineText"
@@ -351,9 +357,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
 
                     <TextView
                         android:id="@+id/treeReserveText"
@@ -383,7 +390,7 @@
 
                     <Button
                         android:id="@+id/btn_treeReserveInput"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="40sp"
                         android:layout_weight="1"
                         android:backgroundTint="#633418"
@@ -392,9 +399,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
 
                     <TextView
                         android:id="@+id/quarryText"
