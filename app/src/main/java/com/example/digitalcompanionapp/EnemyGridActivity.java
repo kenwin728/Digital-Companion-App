@@ -170,7 +170,7 @@ public class EnemyGridActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        SharedPreferences sharedPreferences = getSharedPreferences("enemy_grid_data", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("enemygrid_data" + enemy, MODE_PRIVATE);
         for (int row = 0; row < 6; row++) {
             for (int col = 0; col < 6; col++) {
                 ImageButton button = enemyTile[row][col];
