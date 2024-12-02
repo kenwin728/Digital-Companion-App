@@ -7,4 +7,64 @@
     android:layout_height="match_parent"
     tools:context=".EnemyGridActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DCB370"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/E_gameName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Castles &amp; Catapults"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/enemyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enemy 1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <GridLayout
+            android:id="@+id/ll_EnemyGrid"
+            android:layout_width="match_parent"
+            android:layout_height="540dp"
+            android:layout_gravity="center"
+            android:background="#C5A165"
+            android:columnCount="6"
+            android:padding="5dp"
+            android:rowCount="6"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintVertical_bias="0.0">
+        </GridLayout>
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Reset"
+            android:backgroundTint="#633418"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

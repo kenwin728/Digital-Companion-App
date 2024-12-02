@@ -18,7 +18,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button enemyGridsBtn;
+    Button enemyGridsBtn1, enemyGridsBtn2, enemyGridsBtn3;
     Button collectBtn;
     Button buildBtn;
     Button sabotageBtn;
@@ -49,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        enemyGridsBtn = findViewById(R.id.btn_enemyGrids);
+        enemyGridsBtn1 = findViewById(R.id.btn_enemyGrids1);
+        enemyGridsBtn2 = findViewById(R.id.btn_enemyGrids2);
+        enemyGridsBtn3 = findViewById(R.id.btn_enemyGrids3);
         collectBtn = findViewById(R.id.btn_collect);
         listOfBuildOptionsLL = findViewById(R.id.ll_listOfBuildingOptions);
         sabotageBtn = findViewById(R.id.btn_sabotage);
@@ -80,6 +82,17 @@ public class MainActivity extends AppCompatActivity {
     }
     public void enemyGrids(View v){
         Intent intent = new Intent(MainActivity.this, EnemyGridActivity.class);
+        /*
+        int number = (int) v.getTag();  // Use (int) to cast the tag as an integer.
+        if (number == 1) {
+            intent.putExtra("grid_type", "grid1");
+        } else if (number == 2) {
+            intent.putExtra("grid_type", "grid2");
+        } else {
+            intent.putExtra("grid_type", "grid3");
+        }
+
+         */
         startActivity(intent);
     }
     public void collect(View v){
