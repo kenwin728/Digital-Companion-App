@@ -71,7 +71,7 @@
                     android:backgroundTint="#633418"
                     android:onClick="build_catapult"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/uwah"
+                    android:src="@drawable/catapult"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
@@ -83,7 +83,7 @@
                     android:backgroundTint="#633418"
                     android:onClick="build_goldMine"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/uwah"
+                    android:src="@drawable/goldmine"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
@@ -95,7 +95,7 @@
                     android:backgroundTint="#633418"
                     android:onClick="build_treeReserve"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/uwah"
+                    android:src="@drawable/treereserve"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
@@ -107,7 +107,7 @@
                     android:backgroundTint="#633418"
                     android:onClick="build_quarry"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/uwah"
+                    android:src="@drawable/quarry"
                     tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
 
