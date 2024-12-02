@@ -82,17 +82,18 @@ public class MainActivity extends AppCompatActivity {
     }
     public void enemyGrids(View v){
         Intent intent = new Intent(MainActivity.this, EnemyGridActivity.class);
-        /*
-        int number = (int) v.getTag();  // Use (int) to cast the tag as an integer.
-        if (number == 1) {
-            intent.putExtra("grid_type", "grid1");
-        } else if (number == 2) {
-            intent.putExtra("grid_type", "grid2");
-        } else {
-            intent.putExtra("grid_type", "grid3");
+        String uno = (String) v.getTag();
+        int dos = Integer.parseInt(uno);
+        switch(dos) {
+            case 1:
+                intent.putExtra("grid_type", "grid1");
+                break;
+            case 2:
+                intent.putExtra("grid_type", "grid2");
+                break;
+            case 3:
+                intent.putExtra("grid_type", "grid3");
         }
-
-         */
         startActivity(intent);
     }
     public void collect(View v){

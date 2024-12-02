@@ -19,9 +19,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class EnemyGridActivity extends AppCompatActivity {
     TextView gameNameText;
+
+    TextView enemyText;
     GridLayout enemyGridLL;
     private ImageButton[][] enemyTile = new ImageButton[6][6];
     Button Rerererewindddd;
+
+    private String enemy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,7 @@ public class EnemyGridActivity extends AppCompatActivity {
         });
 
         gameNameText = findViewById(R.id.E_gameName);
+        enemyText = findViewById(R.id.enemyName);
         Rerererewindddd = findViewById(R.id.resetBtn);
         enemyGridLL = findViewById(R.id.ll_EnemyGrid);
 
@@ -45,30 +50,27 @@ public class EnemyGridActivity extends AppCompatActivity {
 
         gameNameText.setBackground(borderDrawable);
         enemyGridLL.setBackground(borderDrawable);
-        /*
-        Intent intent = getIntent();
-        String Enemy = intent.getStringExtra("grid_type");
 
-        if (Enemy != null) {
-            switch (Enemy) {
+        Intent intent = getIntent();
+        enemy = intent.getStringExtra("grid_type");
+
+        if (enemy != null) {
+            switch (enemy) {
                 case "grid1":
                     // Customize for grid 1
-                    gameNameText.setText("Grid 1");
+                    enemyText.setText("Enemy 1");
                     break;
                 case "grid2":
                     // Customize for grid 2
-                    gameNameText.setText("Grid 2");
+                    enemyText.setText("Enemy 2");
                     break;
                 case "grid3":
                     // Customize for grid 3
-                    gameNameText.setText("Grid 3");
-                    break;
-                default:
-                    gameNameText.setText("Unknown Grid");
+                    enemyText.setText("Enemy 3");
                     break;
             }
         }
-         */
+
         // It's a 6x6 grid
         for (int row = 0; row < 6; row++) {
             for (int col = 0; col < 6; col++) {
@@ -138,7 +140,7 @@ public class EnemyGridActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        SharedPreferences sharedPreferences = getSharedPreferences("enemy_grid_data", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("enemygrid_data" + enemy, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         // Save the state of each button in the grid (6x6 grid)
