@@ -6,8 +6,10 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
     TextView errorMessage;
     LinearLayout listOfResourcesLL;
     LinearLayout listOfBuildOptionsLL;
+    EditText goldEditText;
+    EditText stoneEditText;
+    EditText woodEditText;
+    EditText goldMineEditText;
+    EditText treeReserveEditText;
+    EditText quarryEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
         quarryAmountText = findViewById(R.id.quarryAmountText);
         listOfResourcesLL = findViewById(R.id.ll_listOfResources);
         errorMessage = findViewById(R.id.errorMessage);
+        goldEditText = findViewById(R.id.editText_gold);
+        woodEditText = findViewById(R.id.editText_wood);
+        stoneEditText = findViewById(R.id.editText_stone);
+        goldMineEditText = findViewById(R.id.editText_goldMine);
+        treeReserveEditText = findViewById(R.id.editText_treeReserve);
+        quarryEditText = findViewById(R.id.editText_quarry);
 
         // Create a GradientDrawable for the border
         GradientDrawable borderDrawable = new GradientDrawable();
@@ -173,5 +188,72 @@ public class MainActivity extends AppCompatActivity {
             ((TextView) stoneAmountText).setText(String.valueOf(stone));
             errorMessage.setVisibility(View.GONE);
         }
+    }
+
+    public void updateGold(View v){
+        String goldString = goldEditText.getText().toString().trim();
+        if (goldString.isEmpty()){
+            Toast.makeText(MainActivity.this, "No input!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            int gold = Integer.parseInt(goldString);
+            goldAmountText.setText(String.valueOf(gold));
+        }
+        goldEditText.setText("");
+    }
+    public void updateStone(View v){
+        String stoneString =stoneEditText.getText().toString().trim();
+        if (stoneString.isEmpty()){
+            Toast.makeText(MainActivity.this, "No input!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            int stone = Integer.parseInt(stoneString);
+            stoneAmountText.setText(String.valueOf(stone));
+        }
+        stoneEditText.setText("");
+    }
+    public void updateWood(View v){
+        String woodString = woodEditText.getText().toString().trim();
+        if (woodString.isEmpty()){
+            Toast.makeText(MainActivity.this, "No input!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            int wood = Integer.parseInt(woodString);
+            woodAmountText.setText(String.valueOf(wood));
+        }
+        woodEditText.setText("");
+    }
+    public void updateGoldMine(View v){
+        String goldMineString = goldMineEditText.getText().toString().trim();
+        if (goldMineString.isEmpty()){
+            Toast.makeText(MainActivity.this, "No input!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            int goldMine = Integer.parseInt(goldMineString);
+            goldMineAmountText.setText(String.valueOf(goldMine));
+        }
+        goldMineEditText.setText("");
+    }
+    public void updateTreeReserve(View v){
+        String treeReserveString = treeReserveEditText.getText().toString().trim();
+        if (treeReserveString.isEmpty()){
+            Toast.makeText(MainActivity.this, "No input!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            int treeReserve = Integer.parseInt(treeReserveString);
+            treeReserveAmountText.setText(String.valueOf(treeReserve));
+        }
+        treeReserveEditText.setText("");
+    }
+    public void updateQuarry(View v){
+        String quarryString = quarryEditText.getText().toString().trim();
+        if (quarryString.isEmpty()){
+            Toast.makeText(MainActivity.this, "No input!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            int quarry = Integer.parseInt(quarryString);
+            quarryAmountText.setText(String.valueOf(quarry));
+        }
+        quarryEditText.setText("");
     }
 }
